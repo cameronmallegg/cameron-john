@@ -42,7 +42,6 @@
       overflow-x: hidden;
     }
 
-    /* FADE IN ON SCROLL */
     .reveal {
       opacity: 0;
       transform: translateY(24px);
@@ -53,24 +52,21 @@
       transform: translateY(0);
     }
 
-    /* LAYOUT */
     .container {
       max-width: 680px;
       margin: 0 auto;
       padding: 0 24px;
     }
 
-    /* DIVIDER */
     .divider {
       width: 40px;
       height: 1px;
       background: var(--border);
-      margin: 64px auto;
+      margin: 44px auto;
     }
 
-    /* HERO */
     .hero {
-      padding: 100px 0 64px;
+      padding: 100px 0 56px;
       text-align: center;
     }
 
@@ -86,11 +82,11 @@
 
     .hero-headline {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 8vw, 52px);
+      font-size: clamp(32px, 7.5vw, 52px);
       font-weight: 300;
-      line-height: 1.15;
+      line-height: 1.18;
       color: var(--text);
-      margin-bottom: 48px;
+      margin-bottom: 0;
       letter-spacing: -0.01em;
     }
 
@@ -99,58 +95,6 @@
       font-weight: 300;
     }
 
-    /* VSL PLACEHOLDER */
-    .vsl-wrap {
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: var(--bg-subtle);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .vsl-wrap::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #111 0%, #0a0a0a 100%);
-    }
-
-    .vsl-inner {
-      position: relative;
-      text-align: center;
-    }
-
-    .vsl-play {
-      width: 56px;
-      height: 56px;
-      border: 1px solid var(--text-dim);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 16px;
-    }
-
-    .vsl-play svg {
-      width: 18px;
-      height: 18px;
-      fill: var(--text-muted);
-      margin-left: 3px;
-    }
-
-    .vsl-label {
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-    }
-
-    /* CTA BUTTON */
     .cta-btn {
       display: block;
       width: 100%;
@@ -166,7 +110,7 @@
       text-align: center;
       border: none;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, opacity 0.2s ease;
       -webkit-appearance: none;
     }
 
@@ -182,9 +126,8 @@
       letter-spacing: 0.02em;
     }
 
-    /* BODY COPY SECTIONS */
     .section {
-      padding: 80px 0;
+      padding: 52px 0;
     }
 
     .section-label {
@@ -192,7 +135,7 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--text-dim);
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .body-copy p {
@@ -204,19 +147,16 @@
       margin-bottom: 24px;
     }
 
-    .body-copy p:last-child {
-      margin-bottom: 0;
-    }
+    .body-copy p:last-child { margin-bottom: 0; }
 
     .body-copy .emphasis {
       color: #ffffff;
       font-weight: 400;
     }
 
-    /* CALL STRUCTURE */
     .structure-block {
       border-top: 1px solid var(--border);
-      padding: 36px 0;
+      padding: 28px 0;
     }
 
     .structure-block:last-child {
@@ -247,35 +187,29 @@
       line-height: 1.75;
     }
 
-    /* FOR / NOT FOR */
     .criteria-block {
-      margin-bottom: 48px;
+      margin-bottom: 36px;
     }
 
-    .criteria-block:last-child {
-      margin-bottom: 0;
-    }
+    .criteria-block:last-child { margin-bottom: 0; }
 
     .criteria-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 22px;
       font-weight: 400;
       color: var(--text);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
-    .criteria-list {
-      list-style: none;
-    }
+    .criteria-list { list-style: none; }
 
     .criteria-list li {
       font-size: 15px;
       font-weight: 300;
       color: #aaaaaa;
       line-height: 1.7;
-      padding: 14px 0;
+      padding: 12px 0 12px 20px;
       border-bottom: 1px solid var(--border-subtle);
-      padding-left: 20px;
       position: relative;
     }
 
@@ -286,7 +220,6 @@
       color: var(--text-dim);
     }
 
-    /* TESTIMONIALS */
     .testimonial-grid {
       display: flex;
       flex-direction: column;
@@ -296,17 +229,60 @@
 
     .testimonial-card {
       background: var(--bg);
-      padding: 36px 32px;
+      padding: 32px 28px;
     }
 
-    .testimonial-placeholder {
-      font-size: 13px;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
+    .testimonial-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 400;
       font-style: italic;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.3;
     }
 
-    /* ABOUT */
+    .testimonial-preview {
+      font-size: 15px;
+      font-weight: 300;
+      color: #aaaaaa;
+      line-height: 1.75;
+    }
+
+    .testimonial-full {
+      display: none;
+      font-size: 15px;
+      font-weight: 300;
+      color: #aaaaaa;
+      line-height: 1.75;
+    }
+
+    .testimonial-full.open { display: block; }
+
+    .testimonial-name {
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--text-dim);
+      margin-top: 14px;
+      text-transform: uppercase;
+    }
+
+    .see-more-btn {
+      background: none;
+      border: none;
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      padding: 10px 0 0;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .see-more-btn:hover { color: var(--gold-hover); }
+
     .about-copy p {
       font-size: 17px;
       font-weight: 300;
@@ -315,18 +291,15 @@
       margin-bottom: 24px;
     }
 
-    .about-copy p:last-child {
-      margin-bottom: 0;
-    }
+    .about-copy p:last-child { margin-bottom: 0; }
 
     .about-copy .highlight {
       color: var(--text);
       font-weight: 400;
     }
 
-    /* CLOSE */
     .close-section {
-      padding: 80px 0 48px;
+      padding: 52px 0 48px;
       text-align: center;
     }
 
@@ -336,13 +309,11 @@
       font-weight: 300;
       line-height: 1.2;
       color: var(--text);
-      margin-bottom: 48px;
+      margin-bottom: 40px;
       letter-spacing: -0.01em;
     }
 
-    .price-lines {
-      margin-bottom: 48px;
-    }
+    .price-lines { margin-bottom: 40px; }
 
     .price-line {
       font-size: 15px;
@@ -367,29 +338,70 @@
       font-weight: 300;
       font-style: italic;
       color: var(--text-muted);
-      margin-bottom: 40px;
+      margin-bottom: 36px;
       line-height: 1.5;
     }
 
-    /* LEGAL */
-    .legal {
-      padding: 48px 0;
-      border-top: 1px solid var(--border-subtle);
-      margin-top: 80px;
+    .terms-block {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      text-align: left;
     }
 
-    .legal p {
+    .terms-list {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .terms-list li {
       font-size: 12px;
       color: var(--text-dim);
       line-height: 1.7;
-      margin-bottom: 12px;
+      padding: 5px 0 5px 16px;
+      position: relative;
     }
 
-    .legal p:last-child {
-      margin-bottom: 0;
+    .terms-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--text-dim);
     }
 
-    /* FOOTER */
+    .terms-check-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .terms-check-label input[type="checkbox"] {
+      margin-top: 3px;
+      accent-color: var(--gold);
+      width: 15px;
+      height: 15px;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .terms-check-label span {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .section-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 6vw, 38px);
+      font-weight: 300;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
     .footer {
       padding: 32px 0 48px;
       text-align: center;
@@ -401,15 +413,14 @@
       letter-spacing: 0.05em;
     }
 
-    /* SECTION HEADLINE */
-    .section-headline {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(28px, 6vw, 38px);
-      font-weight: 300;
-      line-height: 1.2;
-      color: var(--text);
-      margin-bottom: 40px;
-      letter-spacing: -0.01em;
+    @media (max-width: 600px) {
+      .divider { margin: 32px auto; }
+      .section { padding: 40px 0; }
+      .close-section { padding: 40px 0 36px; }
+      .hero { padding: 80px 0 44px; }
+      .structure-block { padding: 22px 0; }
+      .testimonial-card { padding: 24px 20px; }
+      .terms-block { padding: 20px; }
     }
   </style>
 </head>
@@ -421,27 +432,29 @@
       <div class="reveal">
         <p class="hero-eyebrow">Cameron John</p>
         <h1 class="hero-headline">
-          You've already done<br />everything right.<br />
-          <em>So why does it still feel<br />like something is wrong?</em>
+          You're capable of more.<br />
+          <em>Something keeps getting<br />in the way.</em><br />
+          You just can't see<br />what it is yet.
         </h1>
       </div>
+    </div>
+  </section>
 
+  <div class="divider"></div>
+
+  <!-- ABOUT -->
+  <section class="section">
+    <div class="container">
       <div class="reveal">
-        <div class="vsl-wrap">
-          <div class="vsl-inner">
-            <div class="vsl-play">
-              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <polygon points="5,3 19,12 5,21"/>
-              </svg>
-            </div>
-            <p class="vsl-label">Watch before you book</p>
-          </div>
+        <p class="section-label">About Cameron</p>
+        <div class="about-copy">
+          <p>I spent years producing at a level most people never reach. High-level sales. Multiple businesses. The kind of output that gets you told you have everything it takes.</p>
+          <p>I felt nothing.</p>
+          <p>Not because I wasn't working. Not because I wasn't winning. Because everything I was building was being built on top of something I couldn't see — <span class="highlight">a set of beliefs so deeply embedded they didn't feel like beliefs. They felt like reality.</span> They shaped every decision I made, every ceiling I hit, every win that didn't land the way it should have.</p>
+          <p>When I finally found them — understood where they came from and dismantled them — everything changed. Not just what I was building. How it felt to be alive building it.</p>
+          <p>I'm not a therapist. I don't have a certification on the wall. <span class="highlight">What I have is something that can't be credentialed: the ability to see in other people what they cannot see in themselves.</span> Quickly. Accurately. In a single conversation.</p>
+          <p>I've done the searching. Now it's my job to give you in ninety minutes what took me years to find.</p>
         </div>
-
-        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="cta-btn" target="_blank" rel="noopener">
-          Book Your Diagnostic Call — $299
-        </a>
-        <p class="cta-note">90 minutes. One conversation. Complete clarity.</p>
       </div>
     </div>
   </section>
@@ -475,29 +488,25 @@
         <p class="section-label">What happens on the call</p>
         <p class="section-headline">Ninety minutes.<br />No surface level.</p>
       </div>
-
       <div class="reveal">
         <div class="structure-block">
           <p class="structure-number">First 30 minutes</p>
           <h3 class="structure-title">Where you actually are</h3>
           <p class="structure-body">We go deep on your situation. What's working, what isn't, and what you've been avoiding being fully honest about. No surface-level discovery. We skip straight to what matters.</p>
         </div>
-
         <div class="structure-block">
           <p class="structure-number">Next 30 minutes</p>
           <h3 class="structure-title">The thing running your life</h3>
           <p class="structure-body">I identify the specific belief or pattern that has been operating without your permission. You'll see it clearly — completely — likely for the first time. This is the part that changes everything.</p>
         </div>
-
         <div class="structure-block">
           <p class="structure-number">Final 30 minutes</p>
           <h3 class="structure-title">A real plan forward</h3>
           <p class="structure-body">A concrete game plan built around what we found. Not inspiration. Not concepts. A real direction with real first steps you can execute starting today.</p>
         </div>
       </div>
-
-      <div class="reveal" style="margin-top: 48px;">
-        <p class="body-copy" style="font-size:15px; color:#aaaaaa; line-height:1.85;">Within a few hours after the call you'll receive a written summary — the pattern we identified, your key insights, and your exact action plan. Formatted cleanly and yours to keep.</p>
+      <div class="reveal" style="margin-top: 36px;">
+        <p style="font-size:15px; color:#aaaaaa; line-height:1.85;">Within a few hours after the call you'll receive a written summary — the pattern we identified, your key insights, and your exact action plan. Formatted cleanly and yours to keep.</p>
       </div>
     </div>
   </section>
@@ -518,7 +527,6 @@
             <li>You're done losing time — and opportunity — to something you can't even name.</li>
           </ul>
         </div>
-
         <div class="criteria-block">
           <h3 class="criteria-title">This is not for you if</h3>
           <ul class="criteria-list">
@@ -538,34 +546,37 @@
       <div class="reveal">
         <p class="section-label">What people are saying</p>
         <div class="testimonial-grid">
-          <div class="testimonial-card">
-            <p class="testimonial-placeholder">Testimonial coming soon.</p>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-placeholder">Testimonial coming soon.</p>
-          </div>
-          <div class="testimonial-card">
-            <p class="testimonial-placeholder">Testimonial coming soon.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <div class="divider"></div>
+          <div class="testimonial-card">
+            <p class="testimonial-title">"I was doing everything right and kept ending up in the same spot"</p>
+            <p class="testimonial-preview">Good job, decent money, putting myself out there — nothing was actually landing. Dates would go well and then just fizzle out every single time around month two or three.</p>
+            <div class="testimonial-full" id="t1-full">
+              <p>Interviews felt solid and then I'd just never hear back. Couldn't figure out what I was missing cause honestly I wasn't doing anything obviously wrong. Cameron pointed out something I never would've caught on my own — I wasn't failing, I was just pointed at the completely wrong things. There was something underneath steering me away from what I actually wanted and I had zero clue. Once I saw it I couldn't unsee it. Ended up leaving my job, started my own business, making about three times what I was before. I'm also with someone now that I actually see a real future with. That one call genuinely changed the direction of everything for me.</p>
+            </div>
+            <button class="see-more-btn" onclick="toggleTestimonial('t1-full', this)">Read more</button>
+            <p class="testimonial-name">Jeremy M.</p>
+          </div>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <div class="container">
-      <div class="reveal">
-        <p class="section-label">About Cameron</p>
-        <div class="about-copy">
-          <p>I spent years producing at a level most people never reach. High-level sales. Multiple businesses. The kind of output that gets you told you have everything it takes.</p>
-          <p>I felt nothing.</p>
-          <p>Not because I wasn't working. Not because I wasn't winning. Because everything I was building was being built on top of something I couldn't see — <span class="highlight">a set of beliefs so deeply embedded they didn't feel like beliefs. They felt like reality.</span> They shaped every decision I made, every ceiling I hit, every win that didn't land the way it should have.</p>
-          <p>When I finally found them — understood where they came from and dismantled them — everything changed. Not just what I was building. How it felt to be alive building it.</p>
-          <p>I'm not a therapist. I don't have a certification on the wall. <span class="highlight">What I have is something that can't be credentialed: the ability to see in other people what they cannot see in themselves.</span> Quickly. Accurately. In a single conversation.</p>
-          <p>I've done the searching. Now it's my job to give you in ninety minutes what took me years to find.</p>
+          <div class="testimonial-card">
+            <p class="testimonial-title">"Every time something actually started to matter it would fall apart. Every time."</p>
+            <p class="testimonial-preview">It kept happening. Business, relationships — I'd get close to something real with someone and then somehow it'd go sideways. Told myself it was bad timing, wrong people, whatever.</p>
+            <div class="testimonial-full" id="t2-full">
+              <p>Cameron basically just showed me I was the one doing it. Not on purpose but there was something underneath I couldn't see that was blowing it up every time things got close. Honestly that was hard to sit with but it was exactly what I needed to hear. Once he helped me understand where it was actually coming from the anxiety in those situations just stopped running the show like it used to. Network is completely different now. Relationship is solid. Business has grown more in the last few months than it did in years before that. I was white knuckling everything and the second I understood why I just stopped needing to.</p>
+            </div>
+            <button class="see-more-btn" onclick="toggleTestimonial('t2-full', this)">Read more</button>
+            <p class="testimonial-name">Michael J.</p>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-title">"I'd already built something real. Still felt like it wasn't enough."</p>
+            <p class="testimonial-preview">The numbers were there. By any measure I was winning. But I'd hit something I'd been working toward and feel it for maybe a week and then it was just onto the next thing.</p>
+            <div class="testimonial-full" id="t3-full">
+              <p>I knew something was off I just couldn't nail down what it was or where it came from. Cameron figured it out way faster than I expected honestly. The thing that drove me to build what I built was sitting on top of something I'd never once looked at — and that same thing had a ceiling built into it I kept running into without understanding why. Getting it out in the open completely changed how I operate. Business broke through to a level I'd been stuck under. Relationships got better. But the biggest thing honestly is I can actually feel what I've built now instead of just blowing straight past it.</p>
+            </div>
+            <button class="see-more-btn" onclick="toggleTestimonial('t3-full', this)">Read more</button>
+            <p class="testimonial-name">Josh S.</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -587,22 +598,28 @@
 
         <p class="close-statement">This is not an expense.<br />This is the most important investment you make this year.</p>
 
-        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="cta-btn" target="_blank" rel="noopener">
-          Book Your Diagnostic Call — $299
+        <div class="terms-block">
+          <ul class="terms-list">
+            <li>All information shared during our session is strictly confidential.</li>
+            <li>Recording of the call from either side is not permitted.</li>
+            <li>The written summary provided after the call is for your personal use only and is not to be shared or distributed.</li>
+            <li>Cameron Mallegg is not a licensed therapist, psychologist, financial advisor, or medical professional.</li>
+            <li>All coaching is for informational and personal development purposes only. Results are not guaranteed.</li>
+            <li>Payment of $299 is non-refundable. Rescheduling is permitted with a minimum of 8 hours notice.</li>
+          </ul>
+          <label class="terms-check-label">
+            <input type="checkbox" id="terms-checkbox" onchange="toggleCTA(this)" />
+            <span>I have read and understand the above. I acknowledge that this is a coaching engagement, not a clinical or professional service of any kind.</span>
+          </label>
+        </div>
+
+        <a href="https://calendly.com/cammallegg/the-breakthrough-call" class="cta-btn" id="cta-button" target="_blank" rel="noopener" style="pointer-events:none; opacity:0.35;">
+          Book Your Diagnostic Call
         </a>
-        <p class="cta-note">90 minutes. One conversation. Complete clarity.</p>
+        <p class="cta-note">90 minutes. One conversation.</p>
       </div>
     </div>
   </section>
-
-  <!-- LEGAL -->
-  <div class="container">
-    <div class="legal reveal">
-      <p>All information shared during our session is strictly confidential. Recording of the call from either side is not permitted. After the call you will receive a written summary of your game plan for your personal use only — this document is not to be shared or distributed.</p>
-      <p>Cameron Mallegg is not a licensed therapist, psychologist, financial advisor, or medical professional. All coaching is for informational and personal development purposes only. Results are not guaranteed.</p>
-      <p>One reschedule permitted with 8 hours notice. No-shows and late cancellations are non-refundable.</p>
-    </div>
-  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -623,7 +640,6 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
 
-    // Trigger above-fold elements immediately
     window.addEventListener('load', () => {
       reveals.forEach(el => {
         const rect = el.getBoundingClientRect();
@@ -632,6 +648,23 @@
         }
       });
     });
+
+    function toggleTestimonial(id, btn) {
+      const full = document.getElementById(id);
+      full.classList.toggle('open');
+      btn.textContent = full.classList.contains('open') ? 'Read less' : 'Read more';
+    }
+
+    function toggleCTA(checkbox) {
+      const btn = document.getElementById('cta-button');
+      if (checkbox.checked) {
+        btn.style.pointerEvents = 'auto';
+        btn.style.opacity = '1';
+      } else {
+        btn.style.pointerEvents = 'none';
+        btn.style.opacity = '0.35';
+      }
+    }
   </script>
 
 </body>
